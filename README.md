@@ -1,2 +1,3 @@
-# sshclient
+# SSX
+
 Rust based ssh client
