@@ -10,7 +10,6 @@ struct StrState {
     s: std::sync::Mutex<String>,
 }
 
-// remember to call `.manage(MyState::default())`
 #[tauri::command]
 async fn get_str(state: tauri::State<'_, StrState>) -> Result<String, String> {
     *state.s.lock().unwrap() = format!("{}a", state.s.lock().unwrap());
